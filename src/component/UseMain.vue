@@ -1,3 +1,11 @@
+<script>
+export default {
+  name: 'UseIcons',
+  mounted() {
+    document.title = 'Freesets Api';
+  }
+};
+</script>
 <script setup>
 import { routeUrl } from '@/router/routes';
 import Button from 'primevue/button';
