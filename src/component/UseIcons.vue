@@ -15,7 +15,6 @@ const fetchIcons = async () => {
   }
 };
 
-// Call fetchIcons when the component is mounted
 onMounted(() => {
   fetchIcons();
 });
