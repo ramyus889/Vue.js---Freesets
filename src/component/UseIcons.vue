@@ -1,4 +1,57 @@
-<script setup></script>
+<script setup>
+import axios from 'axios';
+import { onMounted, ref } from 'vue';
+
+const icons = ref([]);
+
+const url = 'https://79d87a1f9ee388f6.mokky.dev/icons';
+
+const fetchIcons = async () => {
+  try {
+    const res = await axios.get(url);
+    icons.value = res.data;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+// Call fetchIcons when the component is mounted
+onMounted(() => {
+  fetchIcons();
+});
+</script>
+
 <template>
-  <div class="">Icons</div>
+  <div class="flex place-content-center">
+    <div class="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5 px-6 mt-[51px]">
+      <div
+        v-for="item in icons"
+        :key="item.id"
+        class="rounded-lg group ring-zinc-700 ring-2 hover:ring-[#2b6dff] transition-all"
+      >
+        <a :href="item.link" target="_blank" class="">
+          <img
+            :src="item.image"
+            alt=""
+            class="object-cover rounded-t-lg aspect-video group-hover:scale-[1.01] transition-transform -z-10"
+          />
+        </a>
+        <div class="flex items-center justify-between w-full p-5 rounded-b-lg bg-zinc-800">
+          <a
+            :href="item.link"
+            target="_blank"
+            class="sm:text-xl text-[16px] font-semibold hover:underline"
+            >{{ item.title }}</a
+          >
+          <a
+            :href="item.tagLink"
+            target="_blank"
+            class="bg-blue-700 transition-all hover:scale-105 px-2 py-1 font-semibold rounded-md text-[13px] tracking-wide"
+          >
+            {{ item.tag }}</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
 </template>

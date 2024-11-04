@@ -111,13 +111,13 @@ const playState = ref('playing');
           <Button
             v-for="item in items"
             :key="item.id"
+            class="mx-5"
             size="medium"
             :to="item.to"
             as="router-link"
             :icon="item.icon"
             :label="item.title"
             :class="item.bgColor"
-            class="mx-5"
           />
         </Vue3Marquee>
       </div>
