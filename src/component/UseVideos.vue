@@ -2,7 +2,7 @@
 export default {
   name: 'UseIllustrations',
   mounted() {
-    document.title = 'Freesets | Illustrations';
+    document.title = 'Freesets | Videos';
   }
 };
 </script>
