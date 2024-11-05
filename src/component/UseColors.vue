@@ -42,7 +42,7 @@ onMounted(() => {
           type="text"
           v-model="searchQuery"
           class="w-[300px] p-3 border-2 rounded-xl border-zinc-700"
-          placeholder="Search illustrations"
+          placeholder="Search colors"
         />
       </div>
       <div
