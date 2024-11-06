@@ -36,7 +36,7 @@ onMounted(() => {
 
 <template>
   <div
-    class="flex justify-center border-t-2 mt-6 border-zinc-600 mx-auto sticky top-0 z-20 right-0 left-0"
+    class="sticky top-0 left-0 right-0 z-20 flex justify-center mx-auto mt-6 border-t-2 border-zinc-600"
   >
     <a
       href="#"
@@ -59,9 +59,7 @@ onMounted(() => {
           placeholder="Search libraries"
         />
       </div>
-      <div
-        class="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5 px-6 mt-[20px]"
-      >
+      <div class="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5 mt-[20px]">
         <div
           v-for="item in filteredUsers"
           :key="item.id"
