@@ -122,7 +122,7 @@ const items = [
         <RouterLink
           :to="item.to"
           :class="item.bgColor"
-          class="flex items-center w-full justify-center gap-2 rounded-md px-4 py-1.5 flex-grow transition-transform hover:scale-[1.03]"
+          class="flex items-center w-full justify-center gap-2 rounded-md px-4 py-1.5 font-semibold flex-grow transition-transform hover:scale-[1.03]"
           ><img :src="item.icon" class="w-[23px] invert-0" alt="" /> {{ item.title }}</RouterLink
         >
       </li>
