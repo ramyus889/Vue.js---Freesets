@@ -53,7 +53,7 @@ onMounted(() => {
           :key="item.id"
           data-aos="fade-up"
           :data-aos-delay="item.delay"
-          class="rounded-lg group ring-zinc-700 ring-2 hover:ring-[#2b6dff] transition-all"
+          class="rounded-lg group ring-zinc-700 ring-2 hover:ring-[#d41cf1] transition-all"
         >
           <a :href="item.link" target="_blank" class="">
             <img
