@@ -6,6 +6,7 @@ const items = [
     id: 1,
     icon: '/headIcon/home.svg',
     to: `${routeUrl[0].path}`,
+    pd: 'px-4 py-[7px]',
     bgColor: '!bg-white !border-none'
   },
   {
@@ -13,6 +14,7 @@ const items = [
     title: 'Icons',
     icon: '/headIcon/icons.svg',
     to: `${routeUrl[1].path}`,
+    pd: 'px-4 py-1.5',
     flexGrow: 'flex-grow md:min-w-[10.5rem] 2xl:min-w-[12rem]',
     bgColor: '!bg-[#2b6dff]  !border-none !text-white'
   },
@@ -21,6 +23,7 @@ const items = [
     title: 'Illustrations',
     icon: '/headIcon/illustrations.svg',
     to: `${routeUrl[2].path}`,
+    pd: 'px-4 py-1.5',
     flexGrow: 'flex-grow md:min-w-[10.5rem] 2xl:min-w-[12rem]',
     bgColor: '!bg-[#20c928]  !border-none !text-white'
   },
@@ -29,6 +32,7 @@ const items = [
     title: 'Photos',
     icon: '/headIcon/photos.svg',
     to: `${routeUrl[3].path}`,
+    pd: 'px-4 py-1.5',
     flexGrow: 'flex-grow md:min-w-[10.5rem] 2xl:min-w-[12rem]',
     bgColor: '!bg-[#d41cf1]  !border-none !text-white'
   },
@@ -37,6 +41,7 @@ const items = [
     title: 'Videos',
     icon: '/headIcon/videos.svg',
     to: `${routeUrl[4].path}`,
+    pd: 'px-4 py-1.5',
     flexGrow: 'flex-grow md:min-w-[10.5rem] 2xl:min-w-[12rem]',
     bgColor: '!bg-[#ef2350]  !border-none !text-white'
   },
@@ -45,6 +50,7 @@ const items = [
     title: 'Colors',
     icon: '/headIcon/colors.svg',
     to: `${routeUrl[5].path}`,
+    pd: 'px-4 py-1.5',
     flexGrow: 'flex-grow md:min-w-[10.5rem] 2xl:min-w-[12rem]',
     bgColor: '!bg-[#ff36a2]  !border-none !text-white'
   },
@@ -53,6 +59,7 @@ const items = [
     title: 'Backgrounds',
     icon: '/headIcon/backgrounds.svg',
     to: `${routeUrl[6].path}`,
+    pd: 'px-4 py-1.5',
     flexGrow: 'flex-grow md:min-w-[10.5rem] 2xl:min-w-[12rem]',
     bgColor: '!bg-[#5345f7]  !border-none !text-white'
   },
@@ -61,6 +68,7 @@ const items = [
     title: 'Typography',
     icon: '/headIcon/typography.svg',
     to: `${routeUrl[7].path}`,
+    pd: 'px-4 py-1.5',
     flexGrow: 'flex-grow md:min-w-[10.5rem] 2xl:min-w-[12rem]',
     bgColor: '!bg-[#ffaa1b]  !border-none !text-white'
   },
@@ -69,6 +77,7 @@ const items = [
     title: '3D',
     icon: '/headIcon/3d.svg',
     to: `${routeUrl[8].path}`,
+    pd: 'px-4 py-1.5',
     flexGrow: 'flex-grow md:min-w-[10.5rem] 2xl:min-w-[12rem]',
     bgColor: '!bg-[#8935ff]  !border-none !text-white'
   },
@@ -77,6 +86,7 @@ const items = [
     title: 'Libraries',
     icon: '/headIcon/libraries.svg',
     to: `${routeUrl[9].path}`,
+    pd: 'px-4 py-1.5',
     flexGrow: 'flex-grow md:min-w-[10.5rem] 2xl:min-w-[12rem]',
     bgColor: '!bg-[#ff006e]  !border-none !text-white'
   },
@@ -85,6 +95,7 @@ const items = [
     title: 'Blogs',
     icon: '/headIcon/blogs.svg',
     to: `${routeUrl[10].path}`,
+    pd: 'px-4 py-1.5',
     flexGrow: 'flex-grow md:min-w-[10.5rem] 2xl:min-w-[12rem]',
     bgColor: '!bg-[#00a1ff]  !border-none !text-white'
   },
@@ -93,6 +104,7 @@ const items = [
     title: 'Tools',
     icon: '/headIcon/tools.svg',
     to: `${routeUrl[11].path}`,
+    pd: 'px-4 py-1.5',
     flexGrow: 'flex-grow md:min-w-[10.5rem] 2xl:min-w-[12rem]',
     bgColor: '!bg-[#f97316]  !border-none !text-white'
   },
@@ -101,6 +113,7 @@ const items = [
     title: 'Inspirations',
     icon: '/headIcon/inspirations.svg',
     to: `${routeUrl[12].path}`,
+    pd: 'px-4 py-1.5',
     flexGrow: 'flex-grow md:min-w-[10.5rem] 2xl:min-w-[12rem]',
     bgColor: '!bg-[#6366f1]  !border-none !text-white'
   },
@@ -109,6 +122,7 @@ const items = [
     title: 'Components',
     icon: '/headIcon/components.svg',
     to: `${routeUrl[13].path}`,
+    pd: 'px-4 py-1.5',
     flexGrow: 'flex-grow md:min-w-[10.5rem] 2xl:min-w-[12rem]',
     bgColor: '!bg-[#21c95f]  !border-none !text-white'
   }
@@ -121,8 +135,8 @@ const items = [
       <li v-for="item in items" :key="item.id" :class="item.flexGrow" class="">
         <RouterLink
           :to="item.to"
-          :class="item.bgColor"
-          class="flex items-center w-full justify-center gap-2 rounded-md px-4 py-1.5 font-semibold flex-grow transition-transform hover:scale-[1.03]"
+          :class="item.bgColor + ' ' + item.pd"
+          class="flex items-center w-full justify-center gap-2 rounded-md font-semibold flex-grow transition-transform hover:scale-[1.03]"
           ><img :src="item.icon" class="w-[23px] invert-0" alt="" /> {{ item.title }}</RouterLink
         >
       </li>
