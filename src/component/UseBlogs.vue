@@ -71,13 +71,6 @@ onMounted(() => {
               class="sm:text-[18px] text-[16px] font-semibold hover:underline"
               >{{ item.title }}</a
             >
-            <a
-              :href="item.tagLink"
-              target="_blank"
-              class="bg-blue-700 transition-all hover:scale-105 px-2 py-1 font-semibold rounded-md text-[13px] tracking-wide"
-            >
-              {{ item.tag }}</a
-            >
           </div>
         </div>
       </div>
