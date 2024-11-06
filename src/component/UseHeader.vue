@@ -103,14 +103,20 @@ const items = [
 </script>
 
 <template>
-  <div class="flex flex-wrap gap-2 place-content-center">
-    <div v-for="item in items" :key="item.id" class="2xl:min-w-[55rem]">
-      <RouterLink
-        :to="item.to"
-        :class="item.bgColor"
-        class="px-4 py-1.5 flex items-center w-full justify-center gap-2 flex-grow rounded-md"
-        ><img :src="item.icon" class="w-[23px]" alt="" /> {{ item.title }}</RouterLink
+  <div class="">
+    <ul class="flex flex-wrap gap-2 place-content-center">
+      <li
+        v-for="item in items"
+        :key="item.id"
+        class="flex-grow md:min-w-[10.5rem] 2xl:min-w-[12rem]"
       >
-    </div>
+        <RouterLink
+          :to="item.to"
+          :class="item.bgColor"
+          class="flex items-center w-full justify-center gap-2 rounded-md px-4 py-1.5 flex-grow transition-transform hover:scale-[1.03]"
+          ><img :src="item.icon" class="w-[23px] invert-0" alt="" /> {{ item.title }}</RouterLink
+        >
+      </li>
+    </ul>
   </div>
 </template>
