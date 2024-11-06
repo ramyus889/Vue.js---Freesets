@@ -92,6 +92,7 @@
 }
 
 body {
+  scroll-behavior: smooth;
   color: var(--color-text);
   background: var(--color-background);
   transition:

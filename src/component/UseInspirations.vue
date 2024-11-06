@@ -35,6 +35,20 @@ onMounted(() => {
 </script>
 
 <template>
+  <div
+    class="flex justify-center border-t-2 mt-6 border-zinc-600 mx-auto sticky top-0 z-20 right-0 left-0"
+  >
+    <a
+      href="#"
+      type="button"
+      class="relative flex gap-2 items-center px-10 py-1.5 bg-[#6366f1] rounded-b-[20px]"
+    >
+      <img src="/headIcon/inspirations.svg" alt="" class="w-6" />
+      <h2 class="text-[17px] font-semibold">
+        Inspirations <span class="text-[15px] font-semibold">(24)</span>
+      </h2>
+    </a>
+  </div>
   <div class="flex place-content-center">
     <div class="">
       <div class="mt-[31px] flex place-content-center mx-auto">
