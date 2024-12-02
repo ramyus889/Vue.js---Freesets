@@ -45,7 +45,7 @@ onMounted(() => {
     >
       <img src="/headIcon/3d.svg" alt="" class="w-6" />
       <h2 class="text-[17px] font-semibold">
-        3D <span class="text-[15px] font-semibold">(23)</span>
+        3D <span class="text-[15px] font-semibold">(23s)</span>
       </h2>
     </a>
   </div>
